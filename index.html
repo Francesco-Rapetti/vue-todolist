@@ -19,8 +19,9 @@
                     <button id="trash" class="opacity-0" @click="removeTodo(i)"><i class="fa-solid fa-trash-alt text-white"></i></button>
                 </div>
             </ul>
-            <div>
+            <div class="d-flex align-items-center">
                 <input type="text" v-model="text" @keyup.enter="addTodo(text)">
+                <button id="add" class="ms-2" @click="addTodo(text)"><i class="fa-solid fa-plus text-white"></i></button>
             </div>
         </div>
     </div>
