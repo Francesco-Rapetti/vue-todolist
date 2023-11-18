@@ -15,7 +15,7 @@
             <ul>
                 <div v-for="(todo, i) in toDoList" id="list" class="d-flex align-items-center m-2">
                     <button id="check" @click="checkTodo(i)"><i class="fa-solid text-white" :class="{'fa-check': todo.done, '': !todo.done}"></i></button>
-                    <li :style="{'text-decoration': todo.done ? 'line-through' : 'none'}" class="mx-2">{{todo.text}}</li>
+                    <li :style="{'text-decoration': todo.done ? 'line-through' : 'none'}" class="mx-2 cursor-pointer" @click="checkTodo(i)">{{todo.text}}</li>
                     <button id="trash" class="opacity-0" @click="removeTodo(i)"><i class="fa-solid fa-trash-alt text-white"></i></button>
                 </div>
             </ul>
