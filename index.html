@@ -11,8 +11,8 @@
 </head>
 <body>
     <div id="app">
-        <div id="glass" class="px-3">
-            <ul class="py-3">
+        <div id="glass" class="p-3">
+            <ul>
                 <div v-for="(todo, i) in toDoList" id="list" class="d-flex align-items-center m-2">
                     <button id="check" @click="checkTodo(i)"><i class="fa-solid text-white" :class="{'fa-check': todo.done, '': !todo.done}"></i></button>
                     <li :style="{'text-decoration': todo.done ? 'line-through' : 'none'}" class="mx-2">{{todo.text}}</li>
