@@ -27,6 +27,7 @@ createApp({
                 text: value,
                 done: false
             })
+            this.text = '';
         },
 
         checkTodo(index) {
