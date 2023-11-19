@@ -45,7 +45,7 @@ createApp({
 
     methods: {
         async addTodo(value) {
-            if (!this.animation) {
+            if (!this.animation && this.text != '') {
                 this.animation = true;
                 glassHeight += 32;
                 document.getElementById('glass').style = `height: ${glassHeight}px;`;
