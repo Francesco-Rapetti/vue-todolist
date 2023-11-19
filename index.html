@@ -13,14 +13,14 @@
     <div id="app">
         <div id="glass" class="p-3">
             <ul>
-                <div v-for="(todo, i) in toDoList" id="list" class="d-flex align-items-center m-2">
+                <div v-for="(todo, i) in toDoList" :id="i" class="list d-flex align-items-center m-2">
                     <button id="check" @click="checkTodo(i)"><i class="fa-solid text-white" :class="{'fa-check': todo.done, '': !todo.done}"></i></button>
                     <li :style="{'text-decoration': todo.done ? 'line-through' : 'none'}" class="mx-2 cursor-pointer" @click="checkTodo(i)">{{todo.text}}</li>
-                    <button id="trash" class="opacity-0" @click="removeTodo(i)"><i class="fa-solid fa-trash-alt text-white"></i></button>
+                    <button id="trash" class="opacity-0" @click="removeTodo(i, i)"><i class="fa-solid fa-trash-alt text-white"></i></button>
                 </div>
             </ul>
-            <div class="d-flex align-items-center">
-                <input type="text" v-model="text" @keyup.enter="addTodo(text)">
+            <div id="input-container" class="d-flex align-items-center">
+                <input id="input" type="text" v-model="text" @keyup.enter="addTodo(text)">
                 <button id="add" class="ms-2" @click="addTodo(text)"><i class="fa-solid fa-plus text-white"></i></button>
             </div>
         </div>
